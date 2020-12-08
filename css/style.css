@@ -160,7 +160,7 @@ ul {
 ===================================================================================================*/
 .hero {
   position: relative;
-  background-image: url("/img/hero_bg_1.png");
+  background-image: url("./img/hero_bg_1.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -384,7 +384,7 @@ ul {
 .gallery {
   padding-top: 80px;
   padding-bottom: 83px;
-  background-image: url("/img/gallery_bg.png");
+  background-image: url("./img/gallery_bg.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
