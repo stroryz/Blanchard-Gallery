@@ -343,11 +343,20 @@ body {
 
 /* Hero
 ===================================================================================================*/
+@keyframes background-scale {
+  0% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 120% 120%;
+  }
+}
 .hero {
   background-image: url("../img/hero_bg_1.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  animation: background-scale 5s alternate linear infinite;
 }
 
 .hero__content-container {
