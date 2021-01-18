@@ -182,7 +182,7 @@ new JustValidate('.map__form', {
   }
 })
 
-// Smooth Scroll
+// Smooth Scroll Nav Menu
 document.querySelectorAll('.nav__link').forEach(link => {
 
     link.addEventListener('click', function(e) {
@@ -201,3 +201,21 @@ document.querySelectorAll('.nav__link').forEach(link => {
         });
     });
 });
+
+// Smooth Scroll Hero Button
+let toBottom = document.querySelector('.hero__btn');
+toBottom.addEventListener('click', function(ev) {
+  ev.preventDefault();
+
+  let href = this.getAttribute('href').substring(1);
+
+  const scrollTar = document.getElementById(href);
+  const topOff = 0;
+  const elPos = scrollTar.getBoundingClientRect().top;
+  const offsetPos = elPos - topOff;
+
+  window.scrollBy({
+    top: offsetPos,
+    behavior: 'smooth'
+  })
+})
