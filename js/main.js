@@ -9,7 +9,9 @@ const swiperGallery = new Swiper(".gallery__swiper-container", {
         el: '.gallery__pagination-item',
         type: 'fraction',
       },
-      spaceBetween: 30,
+      spaceBetween: 50,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
       });
 
 // Choices
@@ -22,7 +24,7 @@ const choices = new Choices(elementChoices, {
 
 // Accordeon
   $(function () {
-        $("#catalogue-accordeon").accordion({
+        $(".accordeon").accordion({
           heightStyle: "content",
           header: ".accordeon__header",
           collapsible: true,
@@ -47,6 +49,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   // Catalogue Tabs
+  let tabsUnit = document.querySelectorAll('.language-list__item');
+  let unit = document.querySelectorAll('.catalogue__unit');
+
+  tabsUnit.forEach(function(unitBtn) {
+    unitBtn.addEventListener('click', function(event) {
+      const path = event.currentTarget.dataset.path;
+
+      unit.forEach(function(unitContent) {
+        unitContent.classList.remove('active-unit');
+        document.querySelector(`[data-target = "${path}"]`).classList.add('active-unit');
+      })
+    })
+  })
+
+
   let tabsItem = document.querySelectorAll('.accordeon__link');
   let tab = document.querySelectorAll('.catalogue-tab');
 
@@ -60,17 +77,19 @@ document.addEventListener('DOMContentLoaded', function() {
       })
     })
   })
-
+  // Попобывать реализовать в виде функции и вызывать после клика на флаг
   // Tabs Items
-  const cont = document.querySelector('.accordeon__list')
+  const cont = document.querySelectorAll('.accordeon__list')
   let btns = document.querySelectorAll('.accordeon__link');
 
-  cont.addEventListener('click', function(e) {
+  cont.forEach(function(el) {
+    el.addEventListener('click', function(e) {
     const target = e.target;
     Array.from(btns).forEach(function(btn) {
       btn.classList.remove('accordeon-link-active');
     })
     target.classList.add('accordeon-link-active');
+    })
   })
 
   // Hide Events

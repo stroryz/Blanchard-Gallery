@@ -153,7 +153,7 @@
                 </ul>
               </li>
             </ul>
-            <div class="search__field">
+            <form class="search__field">
               <button class="search__btn">
                 <svg class="search__icon">
                   <use xlink:href="img/sprite.svg#search_icon"></use>
@@ -165,14 +165,15 @@
                 type="text"
                 placeholder="Поиск по сайту"
               />
-            </div>
+            </form>
           </div>
         </div>
       </div>
     </header>
     <section class="hero">
       <div class="container hero__content-container">
-        <h1 class="hero__title">Прикоснитесь к прекрасному</h1>
+        <h1 class="page-title-hidden">Художественная галерея Blanchard</h1>
+        <h2 class="hero__title">Прикоснитесь к прекрасному</h2>
         <p class="hero__text">
           Мы вынуждены отталкиваться от того, что реализация намеченных плановых
           заданий создаёт предпосылки для новых предложений.
@@ -230,6 +231,7 @@
               </p>
             </div>
           </div>
+          <!-- TODO Переделать слайды в сетку по 2 картинки в высоту -->
           <div class="gallery__slider">
             <div class="swiper-container gallery__swiper-container">
               <div class="swiper-wrapper">
@@ -248,6 +250,8 @@
                       alt=""
                     />
                   </div>
+                </div>
+                <div class="swiper-slide gallery__swiper-slide">
                   <div class="gallery__wrapper">
                     <img
                       class="gallery__img"
@@ -262,6 +266,8 @@
                       alt=""
                     />
                   </div>
+                </div>
+                <div class="swiper-slide gallery__swiper-slide">
                   <div class="gallery__wrapper">
                     <img
                       class="gallery__img"
@@ -277,6 +283,7 @@
                     />
                   </div>
                 </div>
+                <!-- Новые слайды - начало -->
                 <div class="swiper-slide gallery__swiper-slide">
                   <div class="gallery__wrapper">
                     <img
@@ -292,6 +299,8 @@
                       alt=""
                     />
                   </div>
+                </div>
+                <div class="swiper-slide gallery__swiper-slide">
                   <div class="gallery__wrapper">
                     <img
                       class="gallery__img"
@@ -306,6 +315,8 @@
                       alt=""
                     />
                   </div>
+                </div>
+                <div class="swiper-slide gallery__swiper-slide">
                   <div class="gallery__wrapper">
                     <img
                       class="gallery__img"
@@ -336,6 +347,8 @@
                       alt=""
                     />
                   </div>
+                </div>
+                <div class="swiper-slide gallery__swiper-slide">
                   <div class="gallery__wrapper">
                     <img
                       class="gallery__img"
@@ -350,6 +363,8 @@
                       alt=""
                     />
                   </div>
+                </div>
+                <div class="swiper-slide gallery__swiper-slide">
                   <div class="gallery__wrapper">
                     <img
                       class="gallery__img"
@@ -376,682 +391,3392 @@
         <div class="catalogue__top">
           <h2 class="catalogue__title">Каталог</h2>
           <ul class="language-list">
-            <li class="language-list__item"></li>
-            <li class="language-list__item"></li>
-            <li class="language-list__item"></li>
-            <li class="language-list__item active"></li>
-            <li class="language-list__item"></li>
+            <li class="language-list__item" data-path="unit-a"></li>
+            <li class="language-list__item" data-path="unit-b"></li>
+            <li class="language-list__item active" data-path="unit-c"></li>
+            <li class="language-list__item" data-path="unit-d"></li>
+            <li class="language-list__item" data-path="unit-e"></li>
           </ul>
         </div>
-        <p class="catalogue__text">
-          Акционеры крупнейших компаний, которые представляют собой яркий пример
-          континентально-европейского типа политической культуры, будут
-          объявлены нарушающими общечеловеческие нормы этики и морали. Являясь
-          всего лишь частью общей картины, стремящиеся вытеснить традиционное
-          производство, нанотехнологии и по сей день остаются уделом либералов,
-          которые жаждут быть функционально разнесены на независимые элементы.
-        </p>
-        <div class="catalogue__content">
-          <div class="catalogue__content--left">
-            <div class="catalogue-tab active-tab" data-target="tab-one">
-              <img
-                class="catalogue-tab__img"
-                src="img/catalogue_tabs/image_1.jpg"
-                alt=""
-              />
-              <h3 class="catalogue-tab__name">Доменико Гирландайо</h3>
-              <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
-              <p class="catalogue-tab__text">
-                Один из ведущих флорентийских художников Кватроченто, основатель
-                художественной династии, которую продолжили его брат Давид и сын
-                Ридольфо. Глава художественной мастерской, где юный Микеланджело
-                в течение года овладевал профессиональными навыками. Автор
-                фресковых циклов, в которых выпукло, со всевозможными
-                подробностями показана домашняя жизнь библейских персонажей (в
-                их роли выступают знатные граждане Флоренции в костюмах того
-                времени).
-              </p>
+        <!-- TODO Куча аккордионов -->
+        <!-- TODO Если баяны будут работать - удалить id у аккордеонов -->
+        <div class="catalogue__unit" data-target="unit-a">
+          <p class="catalogue__text">
+            Франция крупнейших компаний, которые представляют собой яркий пример
+            континентально-европейского типа политической культуры, будут
+            объявлены нарушающими общечеловеческие нормы этики и морали. Являясь
+            всего лишь частью общей картины, стремящиеся вытеснить традиционное
+            производство, нанотехнологии и по сей день остаются уделом
+            либералов, которые жаждут быть функционально разнесены на
+            независимые элементы.
+          </p>
+          <div class="catalogue__content">
+            <div class="catalogue__content--left">
+              <div
+                class="catalogue-tab active-tab"
+                data-target="unit-a-tab-one"
+              >
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_6.jpg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Франция Первый</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-a-tab-two">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_7.jpg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Франция Второй</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-a-tab-three">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_8.jpg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Франция Третий</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-a-tab-four">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_9.jpg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Франция Четвертый</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-a-tab-five">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_10.jpg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Франция Пятый</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
             </div>
-            <div class="catalogue-tab" data-target="tab-two">
-              <img
-                class="catalogue-tab__img"
-                src="img/catalogue_tabs/image_2.jpeg"
-                alt=""
-              />
-              <h3 class="catalogue-tab__name">Бенедетто ди Биндо</h3>
-              <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
-              <p class="catalogue-tab__text">
-                Один из ведущих флорентийских художников Кватроченто, основатель
-                художественной династии, которую продолжили его брат Давид и сын
-                Ридольфо. Глава художественной мастерской, где юный Микеланджело
-                в течение года овладевал профессиональными навыками. Автор
-                фресковых циклов, в которых выпукло, со всевозможными
-                подробностями показана домашняя жизнь библейских персонажей (в
-                их роли выступают знатные граждане Флоренции в костюмах того
-                времени).
-              </p>
-            </div>
-            <div class="catalogue-tab" data-target="tab-three">
-              <img
-                class="catalogue-tab__img"
-                src="img/catalogue_tabs/image_3.jpeg"
-                alt=""
-              />
-              <h3 class="catalogue-tab__name">Франческо Биссоло</h3>
-              <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
-              <p class="catalogue-tab__text">
-                Один из ведущих флорентийских художников Кватроченто, основатель
-                художественной династии, которую продолжили его брат Давид и сын
-                Ридольфо. Глава художественной мастерской, где юный Микеланджело
-                в течение года овладевал профессиональными навыками. Автор
-                фресковых циклов, в которых выпукло, со всевозможными
-                подробностями показана домашняя жизнь библейских персонажей (в
-                их роли выступают знатные граждане Флоренции в костюмах того
-                времени).
-              </p>
-            </div>
-            <div class="catalogue-tab" data-target="tab-four">
-              <img
-                class="catalogue-tab__img"
-                src="img/catalogue_tabs/image_4.jpeg"
-                alt=""
-              />
-              <h3 class="catalogue-tab__name">Джованни Больтраффио</h3>
-              <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
-              <p class="catalogue-tab__text">
-                Один из ведущих флорентийских художников Кватроченто, основатель
-                художественной династии, которую продолжили его брат Давид и сын
-                Ридольфо. Глава художественной мастерской, где юный Микеланджело
-                в течение года овладевал профессиональными навыками. Автор
-                фресковых циклов, в которых выпукло, со всевозможными
-                подробностями показана домашняя жизнь библейских персонажей (в
-                их роли выступают знатные граждане Флоренции в костюмах того
-                времени).
-              </p>
-            </div>
-            <div class="catalogue-tab" data-target="tab-five">
-              <img
-                class="catalogue-tab__img"
-                src="img/catalogue_tabs/image_5.jpeg"
-                alt=""
-              />
-              <h3 class="catalogue-tab__name">Франческо Бонсиньори</h3>
-              <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
-              <p class="catalogue-tab__text">
-                Один из ведущих флорентийских художников Кватроченто, основатель
-                художественной династии, которую продолжили его брат Давид и сын
-                Ридольфо. Глава художественной мастерской, где юный Микеланджело
-                в течение года овладевал профессиональными навыками. Автор
-                фресковых циклов, в которых выпукло, со всевозможными
-                подробностями показана домашняя жизнь библейских персонажей (в
-                их роли выступают знатные граждане Флоренции в костюмах того
-                времени).
-              </p>
-            </div>
-          </div>
-          <div class="catalogue__content--right">
-            <div class="accordeon" id="catalogue-accordeon">
-              <div class="accordeon__header" tabindex="0">
-                <div class="accordeon__text">C 1400 по 1499 гг.</div>
-                <div class="accordeon__icon"></div>
+            <div class="catalogue__content--right">
+              <div class="accordeon" id="catalogue-accordeon">
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1400 по 1499 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a
+                      class="accordeon__link accordeon-link-active"
+                      data-path="unit-a-tab-one"
+                      >Франция Первый</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-a-tab-two"
+                      >Франция Второй</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-a-tab-three"
+                      >Франция Третий</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-a-tab-four"
+                      >Франция Четвертый</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-a-tab-five"
+                      >Франция Пятый</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1500 по 1599 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1600 по 1699 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1700 по 1799 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1800 по 1899 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1900 по 1999 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 2000 г.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
               </div>
-              <ul class="accordeon__list">
-                <li class="accordeon__item">
-                  <a
-                    class="accordeon__link accordeon-link-active"
-                    data-path="tab-one"
-                    >Доменико Гирландайо</a
-                  >
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link" data-path="tab-two"
-                    >Бенедетто ди Биндо</a
-                  >
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link" data-path="tab-three"
-                    >Биссоло, Франческо</a
-                  >
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link" data-path="tab-four"
-                    >Больтраффио, Джованни</a
-                  >
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link" data-path="tab-five"
-                    >Бонсиньори, Франческо</a
-                  >
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Боттичини, Рафаэлло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Брамантино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бреа, Людовико</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Веккьетта</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Андреа Верроккьо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бергоньоне, Амброджо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Беноццо Гоццоли</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Граначчи, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Грегорио ди Чекко</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джованни да Удине</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джованни ди Паоло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джорджоне</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Парентино, Бернардо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пезеллино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пьетро Перуджино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Перуцци, Бальдассар</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пизанелло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пинтуриккьо</a>
-                </li>
-              </ul>
-              <div class="accordeon__header" tabindex="0">
-                <div class="accordeon__text">C 1500 по 1599 гг.</div>
-                <div class="accordeon__icon"></div>
-              </div>
-              <ul class="accordeon__list">
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бенедетто ди Биндо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бергоньоне, Амброджо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Биссоло, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Больтраффио, Джованни</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бонсиньори, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Боттичини, Рафаэлло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Брамантино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бреа, Людовико</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Веккьетта</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Андреа Верроккьо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Доменико Гирландайо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Беноццо Гоццоли</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Граначчи, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Грегорио ди Чекко</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джованни да Удине</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джованни ди Паоло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джорджоне</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Парентино, Бернардо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пезеллино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пьетро Перуджино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Перуцци, Бальдассар</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пизанелло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пинтуриккьо</a>
-                </li>
-              </ul>
-              <div class="accordeon__header" tabindex="0">
-                <div class="accordeon__text">C 1600 по 1699 гг.</div>
-                <div class="accordeon__icon"></div>
-              </div>
-              <ul class="accordeon__list">
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бенедетто ди Биндо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бергоньоне, Амброджо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Биссоло, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Больтраффио, Джованни</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бонсиньори, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Боттичини, Рафаэлло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Брамантино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бреа, Людовико</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Веккьетта</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Андреа Верроккьо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Доменико Гирландайо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Беноццо Гоццоли</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Граначчи, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Грегорио ди Чекко</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джованни да Удине</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джованни ди Паоло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джорджоне</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Парентино, Бернардо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пезеллино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пьетро Перуджино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Перуцци, Бальдассар</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пизанелло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пинтуриккьо</a>
-                </li>
-              </ul>
-              <div class="accordeon__header" tabindex="0">
-                <div class="accordeon__text">C 1700 по 1799 гг.</div>
-                <div class="accordeon__icon"></div>
-              </div>
-              <ul class="accordeon__list">
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бенедетто ди Биндо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бергоньоне, Амброджо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Биссоло, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Больтраффио, Джованни</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бонсиньори, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Боттичини, Рафаэлло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Брамантино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бреа, Людовико</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Веккьетта</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Андреа Верроккьо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Доменико Гирландайо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Беноццо Гоццоли</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Граначчи, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Грегорио ди Чекко</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джованни да Удине</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джованни ди Паоло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джорджоне</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Парентино, Бернардо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пезеллино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пьетро Перуджино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Перуцци, Бальдассар</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пизанелло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пинтуриккьо</a>
-                </li>
-              </ul>
-              <div class="accordeon__header" tabindex="0">
-                <div class="accordeon__text">C 1800 по 1899 гг.</div>
-                <div class="accordeon__icon"></div>
-              </div>
-              <ul class="accordeon__list">
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бенедетто ди Биндо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бергоньоне, Амброджо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Биссоло, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Больтраффио, Джованни</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бонсиньори, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Боттичини, Рафаэлло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Брамантино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бреа, Людовико</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Веккьетта</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Андреа Верроккьо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Доменико Гирландайо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Беноццо Гоццоли</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Граначчи, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Грегорио ди Чекко</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джованни да Удине</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джованни ди Паоло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джорджоне</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Парентино, Бернардо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пезеллино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пьетро Перуджино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Перуцци, Бальдассар</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пизанелло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пинтуриккьо</a>
-                </li>
-              </ul>
-              <div class="accordeon__header" tabindex="0">
-                <div class="accordeon__text">C 1900 по 1999 гг.</div>
-                <div class="accordeon__icon"></div>
-              </div>
-              <ul class="accordeon__list">
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бенедетто ди Биндо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бергоньоне, Амброджо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Биссоло, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Больтраффио, Джованни</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бонсиньори, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Боттичини, Рафаэлло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Брамантино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бреа, Людовико</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Веккьетта</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Андреа Верроккьо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Доменико Гирландайо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Беноццо Гоццоли</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Граначчи, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Грегорио ди Чекко</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джованни да Удине</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джованни ди Паоло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джорджоне</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Парентино, Бернардо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пезеллино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пьетро Перуджино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Перуцци, Бальдассар</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пизанелло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пинтуриккьо</a>
-                </li>
-              </ul>
-              <div class="accordeon__header" tabindex="0">
-                <div class="accordeon__text">C 2000 г.</div>
-                <div class="accordeon__icon"></div>
-              </div>
-              <ul class="accordeon__list">
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бенедетто ди Биндо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бергоньоне, Амброджо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Биссоло, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Больтраффио, Джованни</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бонсиньори, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Боттичини, Рафаэлло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Брамантино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бреа, Людовико</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Веккьетта</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Андреа Верроккьо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Доменико Гирландайо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Беноццо Гоццоли</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Граначчи, Франческо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Грегорио ди Чекко</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джованни да Удине</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джованни ди Паоло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Джорджоне</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Парентино, Бернардо</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пезеллино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пьетро Перуджино</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Перуцци, Бальдассар</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пизанелло</a>
-                </li>
-                <li class="accordeon__item">
-                  <a class="accordeon__link">Пинтуриккьо</a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
+        <div class="catalogue__unit" data-target="unit-b">
+          <p class="catalogue__text">
+            Германия крупнейших компаний, которые представляют собой яркий
+            пример континентально-европейского типа политической культуры, будут
+            объявлены нарушающими общечеловеческие нормы этики и морали. Являясь
+            всего лишь частью общей картины, стремящиеся вытеснить традиционное
+            производство, нанотехнологии и по сей день остаются уделом
+            либералов, которые жаждут быть функционально разнесены на
+            независимые элементы.
+          </p>
+          <div class="catalogue__content">
+            <div class="catalogue__content--left">
+              <div
+                class="catalogue-tab active-tab"
+                data-target="unit-b-tab-one"
+              >
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_11.jpg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Германия Первый</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-b-tab-two">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_12.jpg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Германия Второй</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-b-tab-three">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_13.jpg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Германия Третий</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-b-tab-four">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_14.jpg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Германия Четвертый</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-b-tab-five">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_15.jpg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Германия Пятый</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+            </div>
+            <div class="catalogue__content--right">
+              <div class="accordeon" id="catalogue-accordeon">
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1400 по 1499 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a
+                      class="accordeon__link accordeon-link-active"
+                      data-path="unit-b-tab-one"
+                      >Германия Первый</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-b-tab-two"
+                      >Германия Второй</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-b-tab-three"
+                      >Германия Третий</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-b-tab-four"
+                      >Германия Четвертый</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-b-tab-five"
+                      >Германия Пятый</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1500 по 1599 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1600 по 1699 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1700 по 1799 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1800 по 1899 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1900 по 1999 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 2000 г.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="catalogue__unit active-unit" data-target="unit-c">
+          <p class="catalogue__text">
+            Акционеры крупнейших компаний, которые представляют собой яркий
+            пример континентально-европейского типа политической культуры, будут
+            объявлены нарушающими общечеловеческие нормы этики и морали. Являясь
+            всего лишь частью общей картины, стремящиеся вытеснить традиционное
+            производство, нанотехнологии и по сей день остаются уделом
+            либералов, которые жаждут быть функционально разнесены на
+            независимые элементы.
+          </p>
+          <div class="catalogue__content">
+            <div class="catalogue__content--left">
+              <div
+                class="catalogue-tab active-tab"
+                data-target="unit-c-tab-one"
+              >
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_1.jpg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Доменико Гирландайо</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-c-tab-two">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_2.jpeg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Бенедетто ди Биндо</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-c-tab-three">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_3.jpeg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Франческо Биссоло</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-c-tab-four">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_4.jpeg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Джованни Больтраффио</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-c-tab-five">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_5.jpeg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Франческо Бонсиньори</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+            </div>
+            <div class="catalogue__content--right">
+              <div class="accordeon" id="catalogue-accordeon">
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1400 по 1499 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a
+                      class="accordeon__link accordeon-link-active"
+                      data-path="unit-c-tab-one"
+                      >Доменико Гирландайо</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-c-tab-two"
+                      >Бенедетто ди Биндо</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-c-tab-three"
+                      >Биссоло, Франческо</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-c-tab-four"
+                      >Больтраффио, Джованни</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-c-tab-five"
+                      >Бонсиньори, Франческо</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1500 по 1599 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1600 по 1699 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1700 по 1799 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1800 по 1899 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1900 по 1999 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 2000 г.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="catalogue__unit" data-target="unit-d">
+          <p class="catalogue__text">
+            Россия крупнейших компаний, которые представляют собой яркий пример
+            континентально-европейского типа политической культуры, будут
+            объявлены нарушающими общечеловеческие нормы этики и морали. Являясь
+            всего лишь частью общей картины, стремящиеся вытеснить традиционное
+            производство, нанотехнологии и по сей день остаются уделом
+            либералов, которые жаждут быть функционально разнесены на
+            независимые элементы.
+          </p>
+          <div class="catalogue__content">
+            <div class="catalogue__content--left">
+              <div
+                class="catalogue-tab active-tab"
+                data-target="unit-d-tab-one"
+              >
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_1.jpg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Россия Первый</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-d-tab-two">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_2.jpeg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Россия Второй</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-d-tab-three">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_3.jpeg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Россия Третий</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-d-tab-four">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_4.jpeg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Россия Четвертый</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-d-tab-five">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_5.jpeg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Россия Пятый</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+            </div>
+            <div class="catalogue__content--right">
+              <div class="accordeon" id="catalogue-accordeon">
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1400 по 1499 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a
+                      class="accordeon__link accordeon-link-active"
+                      data-path="unit-d-tab-one"
+                      >Россия Первый</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-d-tab-two"
+                      >Россия Второй</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-d-tab-three"
+                      >Россия Третий</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-d-tab-four"
+                      >Россия Четвертый</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-d-tab-five"
+                      >Россия Пятый</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1500 по 1599 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1600 по 1699 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1700 по 1799 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1800 по 1899 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1900 по 1999 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 2000 г.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="catalogue__unit" data-target="unit-e">
+          <p class="catalogue__text">
+            Бельгия крупнейших компаний, которые представляют собой яркий пример
+            континентально-европейского типа политической культуры, будут
+            объявлены нарушающими общечеловеческие нормы этики и морали. Являясь
+            всего лишь частью общей картины, стремящиеся вытеснить традиционное
+            производство, нанотехнологии и по сей день остаются уделом
+            либералов, которые жаждут быть функционально разнесены на
+            независимые элементы.
+          </p>
+          <div class="catalogue__content">
+            <div class="catalogue__content--left">
+              <div
+                class="catalogue-tab active-tab"
+                data-target="unit-e-tab-one"
+              >
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_1.jpg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Бельгия Первый</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-e-tab-two">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_2.jpeg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Бельгия Второй</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-e-tab-three">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_3.jpeg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Бельгия Третий</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-e-tab-four">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_4.jpeg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Бельгия Четвертый</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+              <div class="catalogue-tab" data-target="unit-e-tab-five">
+                <img
+                  class="catalogue-tab__img"
+                  src="img/catalogue_tabs/image_5.jpeg"
+                  alt=""
+                />
+                <h3 class="catalogue-tab__name">Бельгия Пятый</h3>
+                <p class="catalogue-tab__date">2 июня 1448 — 11 января 1494</p>
+                <p class="catalogue-tab__text">
+                  Один из ведущих флорентийских художников Кватроченто,
+                  основатель художественной династии, которую продолжили его
+                  брат Давид и сын Ридольфо. Глава художественной мастерской,
+                  где юный Микеланджело в течение года овладевал
+                  профессиональными навыками. Автор фресковых циклов, в которых
+                  выпукло, со всевозможными подробностями показана домашняя
+                  жизнь библейских персонажей (в их роли выступают знатные
+                  граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
+            </div>
+            <div class="catalogue__content--right">
+              <div class="accordeon" id="catalogue-accordeon">
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1400 по 1499 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a
+                      class="accordeon__link accordeon-link-active"
+                      data-path="unit-e-tab-one"
+                      >Бельгия первый</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-e-tab-two"
+                      >Бельгия Второй</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-e-tab-three"
+                      >Бельгия Третий</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-e-tab-four"
+                      >Бельгия Четвертый</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link" data-path="unit-e-tab-five"
+                      >Бельгия Пятый</a
+                    >
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1500 по 1599 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1600 по 1699 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1700 по 1799 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1800 по 1899 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 1900 по 1999 гг.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+                <div class="accordeon__header" tabindex="0">
+                  <div class="accordeon__text">C 2000 г.</div>
+                  <div class="accordeon__icon"></div>
+                </div>
+                <ul class="accordeon__list">
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бенедетто ди Биндо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бергоньоне, Амброджо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Биссоло, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Больтраффио, Джованни</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бонсиньори, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Боттичини, Рафаэлло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Брамантино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бреа, Людовико</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Бьяджо д’Антонио Туччи</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Веккьетта</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Андреа Верроккьо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Доменико Гирландайо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Беноццо Гоццоли</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Граначчи, Франческо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Грегорио ди Чекко</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни да Удине</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джованни ди Паоло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Джорджоне</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Парентино, Бернардо</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пезеллино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пьетро Перуджино</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Перуцци, Бальдассар</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пизанелло</a>
+                  </li>
+                  <li class="accordeon__item">
+                    <a class="accordeon__link">Пинтуриккьо</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TODO Конец аккордионов -->
       </div>
     </section>
     <section class="events" id="events">

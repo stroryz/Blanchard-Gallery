@@ -52,7 +52,7 @@
 }
 
 body {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   font-family: "Open Sans", sans-serif;
 }
 
@@ -92,11 +92,11 @@ body {
 .header__logo-icon {
   width: 173px;
   height: 40px;
-  margin-right: 179px;
   fill: var(--page-white);
 }
 
 .nav {
+  margin-left: 179px;
   margin-right: auto;
 }
 
@@ -319,13 +319,17 @@ body {
   border-color: var(--page-purple);
 }
 
-.search__field:hover .icon__search {
+.search__field:hover .search__icon {
   fill: var(--page-purple);
 }
 
 .search__input:focus {
   outline: none;
   border-color: var(--page-white);
+}
+
+.search__input:focus .search__icon {
+  fill: var(--page-purple);
 }
 
 .search__input:active {
@@ -361,6 +365,17 @@ body {
 
 .hero__content-container {
   padding-top: 95px;
+}
+
+.page-title-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* for IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 .hero__title {
@@ -540,17 +555,9 @@ body {
   transition: text-decoration 0.2s ease;
 }
 
-.disclamer-link:hover {
-  text-decoration: underline;
-}
-
 .disclamer-link:focus {
   outline: 2px solid #7943a4;
   outline-offset: 3px;
-}
-
-.disclamer-link:active {
-  color: #7943a4;
 }
 
 /* Gallery Slider - Start ============================================= */
@@ -565,7 +572,7 @@ body {
 
 .gallery__swiper-slide {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 50px;
 }
 /* Ховер для галереи - начало */
@@ -574,7 +581,7 @@ body {
   cursor: pointer;
 }
 
-.gallery__wrapper:hover::after {
+.gallery__wrapper::after {
   content: "";
   position: absolute;
   display: block;
@@ -583,18 +590,25 @@ body {
   width: 300px;
   height: 300px;
   background-image: url(../img/hover_gallery.svg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
+
+.gallery__wrapper:hover::after {
+  opacity: 1;
+}
+
 /* Ховер для галереи - конец */
 
 .gallery__pagination {
   position: absolute;
-  top: -57px;
+  top: -60px;
   left: 453px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  width: 130px;
+  min-width: 130px;
 }
 
 .slide-next {
@@ -658,8 +672,10 @@ body {
 }
 
 .pagination-item {
-  width: 33px;
+  width: auto;
   height: 23px;
+  margin: 0;
+  margin-top: 5px;
   color: var(--page-white);
 }
 /* Gallery Slider - End ============================================== */
@@ -676,7 +692,6 @@ body {
 }
 
 .catalogue__title {
-  margin-right: 30px;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 48px;
@@ -688,6 +703,7 @@ body {
   display: flex;
   align-items: center;
   margin: 0;
+  margin-left: 30px;
   padding: 0;
   list-style-type: none;
 }
@@ -780,6 +796,14 @@ body {
 
 .language-list__item.active:hover.language-list__item::after {
   box-shadow: none;
+}
+/* TODO Танцы с баяном */
+.catalogue__unit {
+  display: none;
+}
+
+.active-unit {
+  display: block;
 }
 
 .catalogue__content {
@@ -935,9 +959,20 @@ body {
 }
 
 .accordeon__link {
+  position: relative;
   text-decoration: none;
   outline: none;
   color: #333;
+}
+
+.accordeon__link:hover::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  bottom: 1px;
+  left: 0;
+  background-color: var(--page-purple);
 }
 
 .accordeon__link:focus {
@@ -947,7 +982,7 @@ body {
 
 .accordeon__link:hover {
   color: var(--page-purple);
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .accordeon-link-active {
@@ -972,6 +1007,7 @@ body {
 
 .events__visible {
   display: flex;
+  /* margin-bottom: 50px; */
 }
 
 .events__card {
@@ -980,6 +1016,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-bottom: 43px;
+  margin-bottom: 50px;
   border: 1px solid #cacaca;
 }
 
@@ -1036,18 +1073,28 @@ body {
 }
 
 .events__link {
+  position: relative;
   width: 92px;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
   text-decoration: none;
   color: var(--page-purple);
-  border-bottom: 1px solid var(--page-purple);
   outline: none;
 }
 
+.events__link:after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--page-purple);
+}
+
 .events__link:hover {
-  color: #7943a4;
+  font-weight: 700;
 }
 
 .events__link:focus {
@@ -1055,9 +1102,12 @@ body {
   outline-offset: 3px;
 }
 
+.events__link:active {
+  color: #7943a4;
+}
+
 .events__btn--show {
   padding: 17px 35px;
-  margin-top: 50px;
   font-weight: 700;
   font-size: 18px;
   line-height: 24.5px;
@@ -1093,7 +1143,7 @@ body {
 
 .events-active {
   display: flex;
-  margin-top: 50px;
+  flex-wrap: wrap;
 }
 
 .events__btn {
@@ -1132,7 +1182,7 @@ body {
   position: absolute;
   top: 32px;
   left: 465px;
-  width: 130px;
+  min-width: 130px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1145,11 +1195,11 @@ body {
 
 .books__categories {
   margin-bottom: 27px;
+  padding-top: 15px;
 }
 
 .books__categories-title {
   margin: 0;
-  margin-top: 15px;
   font-weight: 700;
   font-size: 16px;
   line-height: 32px;
@@ -1440,15 +1490,36 @@ body {
 }
 
 .projects__text-link {
+  position: relative;
   font-weight: 600;
   font-size: 16px;
   line-height: 32px;
   text-decoration: none;
   color: var(--page-purple);
+  outline: none;
 }
 
-.projects__text-link:hover {
-  text-decoration: underline;
+.projects__text-link:focus {
+  outline: 2px solid var(--page-purple);
+  outline-offset: 3px;
+}
+
+.projects__text-link:hover::after {
+  /* text-decoration: underline; */
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  bottom: 1px;
+  left: 0;
+  background-color: var(--page-purple);
+}
+
+.projects__text-link:active {
+  color: #7943a7;
+}
+.projects__text-link:active .projects__text-link::after {
+  background-color: #7943a7;
 }
 
 .partners__title {
