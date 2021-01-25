@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
       unit.forEach(function(unitContent) {
         unitContent.classList.remove('active-unit');
         document.querySelector(`[data-target = "${path}"]`).classList.add('active-unit');
+        document.querySelector('.catalogue__unit.active-unit .catalogue-tab:first-child').classList.add('tab-placeholder');
       })
     })
   })
@@ -73,10 +74,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
       tab.forEach(function(tabContent) {
         tabContent.classList.remove('active-tab');
+        document.querySelector('.catalogue__unit.active-unit .catalogue-tab:first-child').classList.remove('tab-placeholder');
         document.querySelector(`[data-target = "${path}"]`).classList.add('active-tab');
       })
     })
   })
+
+
   // Попобывать реализовать в виде функции и вызывать после клика на флаг
   // Tabs Items
   const cont = document.querySelectorAll('.accordeon__list')

@@ -76,6 +76,7 @@ body {
 
 .header__top {
   position: relative;
+  /* margin-bottom: -50px; */
 }
 
 .header__container {
@@ -86,6 +87,7 @@ body {
 }
 
 .header__logo {
+  margin-right: 179px;
   text-decoration: none;
 }
 
@@ -96,7 +98,6 @@ body {
 }
 
 .nav {
-  margin-left: 179px;
   margin-right: auto;
 }
 
@@ -154,9 +155,17 @@ body {
 }
 
 .header__bottom {
-  position: absolute;
+  /* position: absolute; */
+  position: relative;
+  /* top: 0; */
+  /* left: 0; */
+  margin-bottom: -74px;
+  /* margin-bottom: -100%; */
   width: 100%;
+  /* height: auto; */
   background-color: rgba(0, 0, 0, 0.4);
+  /* z-index: 5; */
+  /* transform: translate(0, 100%); */
 }
 .search {
   padding-top: 22px;
@@ -223,23 +232,38 @@ body {
   margin-right: 110px;
 }
 
-.search__result-list {
+.search__result {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 203%;
   left: 0;
   width: 300px;
   margin: 0;
-  padding: 40px;
   height: 300px;
   overflow: auto;
-  list-style-type: none;
+
   transition: 0.3s ease-in-out;
   transform: scaleY(0);
   transform-origin: 0 0;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.search__result-list {
+  width: 270px;
+  height: 224px;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  list-style-type: none;
+}
+
 .search__item:hover > .search__result-list {
+  transform: scaleY(1);
+}
+.search__item:hover > .search__result {
   transform: scaleY(1);
 }
 
@@ -257,7 +281,7 @@ body {
 }
 
 .search__result-item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .search__result-item:nth-child(n) {
@@ -295,6 +319,7 @@ body {
 }
 
 .simplebar-scrollbar::before {
+  width: 2px;
   background-color: var(--page-purple);
 }
 
@@ -364,7 +389,7 @@ body {
 }
 
 .hero__content-container {
-  padding-top: 95px;
+  padding-top: 85px;
 }
 
 .page-title-hidden {
@@ -675,7 +700,9 @@ body {
   width: auto;
   height: 23px;
   margin: 0;
-  margin-top: 5px;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
   color: var(--page-white);
 }
 /* Gallery Slider - End ============================================== */
@@ -694,6 +721,7 @@ body {
 .catalogue__title {
   margin-top: 0;
   margin-bottom: 0;
+  margin-right: 30px;
   font-size: 48px;
   font-weight: 400;
   line-height: 65px;
@@ -703,7 +731,7 @@ body {
   display: flex;
   align-items: center;
   margin: 0;
-  margin-left: 30px;
+  /* margin-left: 30px; */
   padding: 0;
   list-style-type: none;
 }
@@ -797,7 +825,7 @@ body {
 .language-list__item.active:hover.language-list__item::after {
   box-shadow: none;
 }
-/* TODO Танцы с баяном */
+
 .catalogue__unit {
   display: none;
 }
@@ -820,6 +848,10 @@ body {
 
 .catalogue-tab {
   display: none;
+}
+
+.tab-placeholder {
+  display: block;
 }
 
 .active-tab {
@@ -941,9 +973,10 @@ body {
 
 .accordeon__list {
   height: 340px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* column-count: 3; */
   margin: 0;
   padding: 25px 0;
   list-style-type: none;
@@ -952,6 +985,9 @@ body {
 }
 
 .accordeon__item {
+  display: block;
+  float: left;
+  width: 30%;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
@@ -982,7 +1018,6 @@ body {
 
 .accordeon__link:hover {
   color: var(--page-purple);
-  /* text-decoration: underline; */
 }
 
 .accordeon-link-active {
@@ -1007,7 +1042,6 @@ body {
 
 .events__visible {
   display: flex;
-  /* margin-bottom: 50px; */
 }
 
 .events__card {
@@ -1081,6 +1115,7 @@ body {
   text-decoration: none;
   color: var(--page-purple);
   outline: none;
+  transition: all 0.2s ease;
 }
 
 .events__link:after {
@@ -1461,8 +1496,15 @@ body {
 }
 
 .tooltip {
-  display: inline-block;
   position: relative;
+  margin-right: 18px;
+}
+
+.tooltip-item {
+  display: inline-block;
+  position: absolute;
+  top: 10%;
+  left: calc(100% + 1px);
   width: 16px;
   height: 16px;
   margin-left: 2px;
@@ -1471,10 +1513,10 @@ body {
   cursor: pointer;
 }
 
-.tooltip::before {
+.tooltip-item::before {
   content: "i";
   position: absolute;
-  top: -7px;
+  top: -7.5px;
   left: 6px;
   font-weight: 600;
   font-size: 14px;
@@ -1505,7 +1547,6 @@ body {
 }
 
 .projects__text-link:hover::after {
-  /* text-decoration: underline; */
   position: absolute;
   content: "";
   height: 1px;
