@@ -1,5 +1,7 @@
-// Swiper Gallery
-const swiperGallery = new Swiper(".gallery__swiper-container", {
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Swiper Gallery
+  const swiperGallery = new Swiper(".gallery__swiper-container", {
         navigation: {
           nextEl: ".gallery__next",
           prevEl: ".gallery__prev",
@@ -14,7 +16,7 @@ const swiperGallery = new Swiper(".gallery__swiper-container", {
       slidesPerGroup: 3,
       });
 
-// Choices
+  // Choices
   const elementChoices = document.querySelector('.gallery__select');
   const choices = new Choices(elementChoices, {
     position: 'bottom',
@@ -32,7 +34,8 @@ const swiperGallery = new Swiper(".gallery__swiper-container", {
         });
       });
 
-// Flag Buttons
+  // Flag Buttons
+
   const container = document.querySelector('.language-list')
   let buttons = document.querySelectorAll('.language-list__item');
 
@@ -81,7 +84,6 @@ const swiperGallery = new Swiper(".gallery__swiper-container", {
 
   cont.forEach(function(el) {
     el.addEventListener('click', function(e) {
-      el.querySelector('.accordeon__link:first-child').classList.remove('accordeon-link-active');
       const target = e.target;
       while (target !== this) {
         if (target.className === 'accordeon__link') {
@@ -104,6 +106,7 @@ const swiperGallery = new Swiper(".gallery__swiper-container", {
   const hiddenButton = document.querySelector('.events__btn--show');
   const hiddenEvents = document.querySelectorAll('.events__card:nth-child(n + 4)');
 
+
   hiddenButton.addEventListener('click', function() {
     hiddenEvents.forEach(function(e) {
       e.style.display = 'block';
@@ -111,8 +114,8 @@ const swiperGallery = new Swiper(".gallery__swiper-container", {
     hiddenButton.classList.add('btn-hidden');
   })
 
-// Books Swiper
-const swiperBooks = new Swiper('.books__swiper-container', {
+  // Books Swiper
+  const swiperBooks = new Swiper('.books__swiper-container', {
       slidesPerView: 3,
       spaceBetween: 40,
       navigation: {
@@ -127,8 +130,8 @@ const swiperBooks = new Swiper('.books__swiper-container', {
       },
     });
 
-// Tooltips
-tippy("#tooltip-one", {
+  // Tooltips
+  tippy("#tooltip-one", {
         content:
           "Пример современных тенденций - современная методология разработки",
         theme: "grey",
@@ -143,8 +146,8 @@ tippy("#tooltip-one", {
         theme: "grey",
       });
 
-// Partners Swiper
-const swiperPartners = new Swiper('.partners__swiper-container', {
+  // Partners Swiper
+  const swiperPartners = new Swiper('.partners__swiper-container', {
   slidesPerView: 3,
   spaceBetween: 50,
   navigation: {
@@ -152,10 +155,10 @@ const swiperPartners = new Swiper('.partners__swiper-container', {
     prevEl: ".partners__prev"
   },
   loop: true,
-});
+  });
 
-// Map
-ymaps.ready(init);
+  // Map
+  ymaps.ready(init);
     function init(){
         var myMap = new ymaps.Map("map", {
             center: [55.75846306898368,37.601079499999905],
@@ -185,13 +188,13 @@ ymaps.ready(init);
         myMap.geoObjects.add(myPlacemark);
     }
 
-// Inputmask Plugin
-const input = document.querySelector('.map__form-phone');
-const mask = new Inputmask("+7 (999) 999-99-99");
-mask.mask(input);
+  // Inputmask Plugin
+  const input = document.querySelector('.map__form-phone');
+  const mask = new Inputmask("+7 (999) 999-99-99");
+  mask.mask(input);
 
-// JustValidate Plugin
-new JustValidate('.map__form', {
+  // JustValidate Plugin
+  new JustValidate('.map__form', {
   rules: {
     name: {
       required: true,
@@ -207,10 +210,10 @@ new JustValidate('.map__form', {
       }
     }
   }
-})
+  })
 
-// Smooth Scroll Nav Menu
-document.querySelectorAll('.nav__link').forEach(link => {
+  // Smooth Scroll Nav Menu
+  document.querySelectorAll('.nav__link').forEach(link => {
 
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -227,22 +230,24 @@ document.querySelectorAll('.nav__link').forEach(link => {
             behavior: 'smooth'
         });
     });
-});
+  });
 
-// Smooth Scroll Hero Button
-let toBottom = document.querySelector('.hero__btn');
-toBottom.addEventListener('click', function(ev) {
-  ev.preventDefault();
+  // Smooth Scroll Hero Button
+  let toBottom = document.querySelector('.hero__btn');
+  toBottom.addEventListener('click', function(ev) {
+    ev.preventDefault();
 
-  let href = this.getAttribute('href').substring(1);
+    let href = this.getAttribute('href').substring(1);
 
-  const scrollTar = document.getElementById(href);
-  const topOff = 0;
-  const elPos = scrollTar.getBoundingClientRect().top;
-  const offsetPos = elPos - topOff;
+    const scrollTar = document.getElementById(href);
+    const topOff = 0;
+    const elPos = scrollTar.getBoundingClientRect().top;
+    const offsetPos = elPos - topOff;
 
-  window.scrollBy({
-    top: offsetPos,
-    behavior: 'smooth'
+    window.scrollBy({
+      top: offsetPos,
+      behavior: 'smooth'
+    })
   })
+
 })

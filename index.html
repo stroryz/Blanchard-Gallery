@@ -236,9 +236,9 @@
       </div>
     </section>
     <section class="gallery" id="gallery">
-      <div class="container">
+      <div class="container gallery__container">
         <h2 class="gallery__title">Галерея</h2>
-        <div class="gallery__container">
+        <div class="gallery__wrapper">
           <div class="gallery__pagination">
             <div class="slide-next gallery__next" tabindex="0"></div>
             <div class="pagination-item gallery__pagination-item"></div>
@@ -266,19 +266,18 @@
               </p>
             </div>
           </div>
-          <!-- TODO Переделать слайды в сетку по 2 картинки в высоту -->
           <div class="gallery__slider">
             <div class="swiper-container gallery__swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide gallery__swiper-slide">
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_1.jpg"
                       alt=""
                     />
                   </div>
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_2.jpg"
@@ -287,14 +286,14 @@
                   </div>
                 </div>
                 <div class="swiper-slide gallery__swiper-slide">
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_3.jpg"
                       alt=""
                     />
                   </div>
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_4.jpg"
@@ -303,14 +302,14 @@
                   </div>
                 </div>
                 <div class="swiper-slide gallery__swiper-slide">
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_5.jpg"
                       alt=""
                     />
                   </div>
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_6.jpg"
@@ -320,14 +319,14 @@
                 </div>
                 <!-- Новые слайды - начало -->
                 <div class="swiper-slide gallery__swiper-slide">
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_7.jpg"
                       alt=""
                     />
                   </div>
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_8.jpg"
@@ -336,14 +335,14 @@
                   </div>
                 </div>
                 <div class="swiper-slide gallery__swiper-slide">
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_9.jpg"
                       alt=""
                     />
                   </div>
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_10.jpg"
@@ -352,14 +351,14 @@
                   </div>
                 </div>
                 <div class="swiper-slide gallery__swiper-slide">
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_11.jpg"
                       alt=""
                     />
                   </div>
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_12.jpg"
@@ -368,14 +367,14 @@
                   </div>
                 </div>
                 <div class="swiper-slide gallery__swiper-slide">
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_13.jpg"
                       alt=""
                     />
                   </div>
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_14.jpg"
@@ -384,14 +383,14 @@
                   </div>
                 </div>
                 <div class="swiper-slide gallery__swiper-slide">
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_15.jpg"
                       alt=""
                     />
                   </div>
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_16.jpg"
@@ -400,14 +399,14 @@
                   </div>
                 </div>
                 <div class="swiper-slide gallery__swiper-slide">
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_17.jpg"
                       alt=""
                     />
                   </div>
-                  <div class="gallery__wrapper">
+                  <div class="gallery__slide-wrapper">
                     <img
                       class="gallery__img"
                       src="img/gallery_section/img_18.jpg"
@@ -433,8 +432,6 @@
             <li class="language-list__item" data-path="unit-e"></li>
           </ul>
         </div>
-        <!-- TODO Куча аккордионов -->
-        <!-- TODO Если баяны будут работать - удалить id у аккордеонов -->
         <div class="catalogue__unit" data-target="unit-a">
           <p class="catalogue__text">
             Франция крупнейших компаний, которые представляют собой яркий пример
@@ -3911,8 +3908,6 @@
             </div>
           </div>
         </div>
-
-        <!-- TODO Конец аккордионов -->
       </div>
     </section>
     <section class="events" id="events">
@@ -3997,8 +3992,6 @@
               <a class="events__link" href="#">Подробнее</a>
             </div>
           </div>
-        </div>
-        <div class="events__hidden">
           <div class="events__card">
             <figure class="events__image">
               <img
@@ -4198,15 +4191,17 @@
             <div class="books__price">
               <h3 class="books__price-title">Цена</h3>
               <div class="books__price-item">
-                <span class="books__price-text">От</span>
+                <label for="low-price" class="books__price-text">От</label for="low-price">
                 <input
                   class="books__price-input"
+                  id="low-price"
                   type="text"
                   placeholder="50"
                 />
-                <span class="books__price-text">до</span>
+                <label for="high-price" class="books__price-text">до</label>
                 <input
                   class="books__price-input"
+                  id="high-price"
                   type="text"
                   placeholder="25 000"
                 />
@@ -4340,17 +4335,17 @@
           смешаны с не уникальными данными до степени совершенной
           неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде
           всего, постоянное информационно-<span class="tooltip"
-            >пропагандистское<span class="tooltip-item" id="tooltip-one"></span
+            >пропагандистское<span class="tooltip-item" id="tooltip-one" tabindex="0"></span
           ></span>
           обеспечение нашей деятельности однозначно фиксирует необходимость
           экономической целесообразности принимаемых решений. И нет сомнений,
           что действия представителей оппозиции могут быть
           <span class="tooltip"
-            >рассмотрены<span class="tooltip-item" id="tooltip-two"></span
+            >рассмотрены<span class="tooltip-item" id="tooltip-two" tabindex="0"></span
           ></span>
           исключительно в разрезе маркетинговых и
           <span class="tooltip"
-            >финансовых<span class="tooltip-item" id="tooltip-three"></span
+            >финансовых<span class="tooltip-item" id="tooltip-three" tabindex="0"></span
           ></span>
           предпосылок. Банальные, но неопровержимые выводы, а также
           представители современных социальных резервов призывают нас к новым
