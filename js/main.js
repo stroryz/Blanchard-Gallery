@@ -179,7 +179,7 @@ ymaps.ready(init);
           55.75846306898368,37.601079499999905
         ], {}, {
           iconLayout: 'default#image',
-          iconImageHref: '/img/map_marker.svg',
+          iconImageHref: 'img/map_marker.svg',
           iconImageSize: [20, 20],
         })
         myMap.geoObjects.add(myPlacemark);
