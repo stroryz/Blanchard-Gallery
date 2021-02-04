@@ -206,6 +206,10 @@ new JustValidate('.map__form', {
         return Number(phone) && phone.lenght === 10;
       }
     }
+  },
+  messages: {
+    name: 'Необходимо заполнить поле',
+    phone: 'Необходимо заполнить поле',
   }
 })
 

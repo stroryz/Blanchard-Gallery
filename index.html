@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/choices.min.css" />
     <link rel="stylesheet" href="css/simplebar.min.css" />
+    <link rel="stylesheet" href="./css/justValidateTooltip.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/choices.min.js" defer></script>
@@ -205,7 +206,8 @@
         </div>
       </div>
     </header>
-    <section class="hero">
+    <main class="main">
+      <section class="hero">
       <div class="container hero__content-container">
         <h1 class="page-title-hidden">Художественная галерея Blanchard</h1>
         <h2 class="hero__title">Прикоснитесь к прекрасному</h2>
@@ -3922,8 +3924,8 @@
                 alt="event image"
               />
               <figcaption class="events__pic-description">
-                Музей им. Щусева<br />
-                с 20 марта по 30 апреля
+                <p class="events__pic-description--adress">Музей им. Щусева</p>
+                <p class="events__pic-description--date">с 20 марта по 30 апреля</p>
               </figcaption>
             </figure>
             <div class="events__card-content">
@@ -3949,7 +3951,8 @@
                 alt="event image"
               />
               <figcaption class="events__pic-description">
-                ММОМА<br />24 марта 19:00
+                <p class="events__pic-description--adress">ММОМА</p>
+                <p class="events__pic-description--date">24 марта 19:00</p>
               </figcaption>
             </figure>
             <div class="events__card-content">
@@ -3975,7 +3978,8 @@
                 alt="event image"
               />
               <figcaption class="events__pic-description">
-                Еврейский музей<br />с 31 марта по 21 апреля
+                <p class="events__pic-description--adress">Еврейский музей</p>
+                <p class="events__pic-description--date">с 31 марта по 21 апреля</p>
               </figcaption>
             </figure>
             <div class="events__card-content">
@@ -4000,9 +4004,8 @@
                 alt="event image"
               />
               <figcaption class="events__pic-description">
-                Третьяковка на Крымском валу
-                <br />
-                с 30 марта по 30 апреля
+                <p class="events__pic-description--adress">Третьяковка на Крымском валу</p>
+                <p class="events__pic-description--date">с 30 марта по 30 апреля</p>
               </figcaption>
             </figure>
             <div class="events__card-content">
@@ -4028,8 +4031,8 @@
                 alt="event image"
               />
               <figcaption class="events__pic-description">
-                ММАМ
-                <br />с 8 апреля по 20 мая
+                <p class="events__pic-description--adress">ММАМ</p>
+                <p class="events__pic-description--date">с 8 апреля по 20 мая24 марта 19:00</p>
               </figcaption>
             </figure>
             <div class="events__card-content">
@@ -4050,8 +4053,7 @@
         </div>
         <div class="events__btn">
           <button class="btn events__btn--show">
-            <!-- TODO Убрать спаны и лишние стили в style -->
-            <span class="btn-focus">Все события</span>
+            Все события
           </button>
         </div>
       </div>
@@ -4225,7 +4227,7 @@
                   </div>
                   <p class="book-author">Иттен, Иоханнес</p>
                   <a href="#" class="btn book-order">
-                    <span class="btn-focus">Заказать</span></a
+                    Заказать</a
                   >
                 </div>
                 <div class="books__swiper-slide swiper-slide">
@@ -4240,7 +4242,7 @@
                   </div>
                   <p class="book-author">Рудер, Эмиль</p>
                   <a href="#" class="btn book-order"
-                    ><span class="btn-focus">Заказать</span></a
+                    >Заказать</a
                   >
                 </div>
                 <div class="books__swiper-slide swiper-slide">
@@ -4255,7 +4257,7 @@
                   </div>
                   <p class="book-author">Гордон, Юрий</p>
                   <a href="#" class="btn book-order"
-                    ><span class="btn-focus">Заказать</span></a
+                    >Заказать</a
                   >
                 </div>
                 <div class="books__swiper-slide swiper-slide">
@@ -4270,7 +4272,7 @@
                   </div>
                   <p class="book-author">Кричевский, Владимир</p>
                   <a href="#" class="btn book-order"
-                    ><span class="btn-focus">Заказать</span></a
+                    >Заказать</a
                   >
                 </div>
                 <div class="books__swiper-slide swiper-slide">
@@ -4287,7 +4289,7 @@
                   </div>
                   <p class="book-author">Мюллер-Брокман, Йозеф</p>
                   <a href="#" class="btn book-order"
-                    ><span class="btn-focus">Заказать</span></a
+                    >Заказать</a
                   >
                 </div>
                 <div class="books__swiper-slide swiper-slide">
@@ -4302,7 +4304,7 @@
                   </div>
                   <p class="book-author">Иттен, Иоханнес</p>
                   <a href="#" class="btn book-order"
-                    ><span class="btn-focus">Заказать</span></a
+                    >Заказать</a
                   >
                 </div>
                 <div class="books__swiper-slide swiper-slide">
@@ -4317,7 +4319,7 @@
                   </div>
                   <p class="book-author">Иттен, Иоханнес</p>
                   <a href="#" class="btn book-order"
-                    ><span class="btn-focus">Заказать</span></a
+                    >Заказать</a
                   >
                 </div>
               </div>
@@ -4360,7 +4362,6 @@
           <h3 class="partners__title">Партнёры проектов:</h3>
           <div class="partners__content">
             <div class="slide-prev partners__prev"></div>
-            <!-- TODO проверить работоспособность слайдера на gitpages -->
             <div class="partners__slider">
               <div class="swiper-container partners__swiper-container">
                 <div class="swiper-wrapper partners__swiper-wrapper">
@@ -4411,21 +4412,26 @@
           </p>
           <h3 class="map__form-title">Заказать обратный звонок</h3>
           <form class="map__form" method="GET">
-            <input
+            <div class="just-validate-tooltip-container">
+              <input
               type="text"
               class="map__input map__form-name"
               id="name"
               placeholder="Имя*"
               data-validate-field="name"
             />
-            <input
+            </div>
+            <div class="just-validate-tooltip-container">
+              <input
               type="tel"
               class="map__input map__form-phone"
               id="phone"
               placeholder="Телефон*"
               data-validate-field="phone"
             />
-            <button class="btn map__inner-btn"><span class="btn-focus">Заказать</span></button>
+            </div>
+
+            <button class="btn map__inner-btn">Заказать</button>
           </form>
           <h3 class="map__inner-text">Связаться в один клик</h3>
           <div class="map__inner-social">
@@ -4436,6 +4442,7 @@
         <div class="map" id="map"></div>
       </div>
     </section>
+    </main>
     <footer class="footer">
       <div class="container footer__container">
         <div class="footer__logo">
