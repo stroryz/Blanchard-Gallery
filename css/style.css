@@ -1569,6 +1569,7 @@ body {
 
 .tippy-box[data-theme~="grey"] > .tippy-arrow::before {
   border-top-color: #cacaca;
+  border-bottom-color: #cacaca;
 }
 
 .projects__text-link {
